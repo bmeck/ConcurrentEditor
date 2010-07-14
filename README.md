@@ -19,21 +19,21 @@ include on your server
 
 ### Synchronizer.prototype.sync(callback/*(err)*/)
 
- * client:
+* client:
 
 save(...) with all server connections
 
- * server:
+* server:
 
 broadcast doc to all clients
 
 ### Synchronizer.prototype.save(doc_or_stream,callback/*(err)*/)
 
- * client:
+* client:
 
 update the server to contain this text
 
- * server:
+* server:
 
 set the doc to the document or stream provided and broadcast results
 
