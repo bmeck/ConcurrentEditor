@@ -1,13 +1,15 @@
 var connect = require('connect')
   , ws = require('websocket-server')
   , sys = require('sys')
-  , SynchronizedText = require('./api').SynchronizedText
+  , SynchronizedText = require('../lib/server/api').SynchronizedText
 
 var input = new SynchronizedText('input')
   , input_color = new SynchronizedText('input.color')
+
 input.onupdate = function(doc) {
   input_color.save(doc)
 }
+
 var texts = [
   new SynchronizedText('textarea')
   , input

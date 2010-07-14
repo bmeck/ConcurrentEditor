@@ -4,7 +4,11 @@ function SyncInput(element,websocket,name) {
   sync.open(websocket)
   sync.onupdate = function(doc) {
     element.disabled = false
+    var caret = element.selectionStart
+      , selection = element.selectionEnd
     element.value = doc
+    element.selectionStart = caret
+    element.selectionEnd = selection
   }
   element.onkeydown = function(e) {
     if(!element.disabled) {
