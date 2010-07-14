@@ -6,11 +6,14 @@
 
 ## Files
 
- * lib/client/api.js
+* lib/client/api.js
+
 include in your web page
 
     <script src="...">
- * lib/server/api.js
+
+* lib/server/api.js
+
 include on your server
 
     require(...)
